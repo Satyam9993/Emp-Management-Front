@@ -93,8 +93,9 @@ const EmployeeCard = ({
             // alert
             alert("Error Somthing!")
         }
-        await fetchEmployeesDetails()
+        await fetchEmployeesDetails();
         handleCloseModal();
+        setIsEdit(false);
     };
 
     const handleDelete = async () => {
