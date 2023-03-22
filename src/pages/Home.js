@@ -17,7 +17,7 @@ const Home = () => {
     }, [user, token]) //eslint-disable-line
 
     const getEmployeesData = async() => {
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/all`,
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/all`,
         {
             method: "GET",
             headers: {

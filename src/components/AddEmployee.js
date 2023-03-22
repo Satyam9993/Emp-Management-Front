@@ -55,7 +55,7 @@ const AddEmployeeCard = () => {
     };
 
     const Response = await fetch(
-      `${BACKEND_URL}/create-emp`,
+      `${BACKEND_URL}/api/create-emp`,
       {
         method: 'POST',
         headers: {
@@ -86,7 +86,7 @@ const AddEmployeeCard = () => {
   };
 
   const fetchEmployeesDetails = async () => {
-    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/all`,
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/all`,
       {
         method: "GET",
         headers: {

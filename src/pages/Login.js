@@ -26,7 +26,7 @@ const Login = () => {
         console.log(body);
         if (!formdata.email || !formdata.password) return;
         const loggedInResponse = await fetch(
-            `${BACKEND_URL}/login`,
+            `${BACKEND_URL}/api/login`,
             {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },

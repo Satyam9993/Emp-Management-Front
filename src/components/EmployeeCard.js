@@ -78,7 +78,7 @@ const EmployeeCard = ({
         };
 
         const Response = await fetch(
-            `${BACKEND_URL}/update-emp`,
+            `${BACKEND_URL}/api/update-emp`,
             {
                 method: 'POST',
                 headers: {
@@ -105,7 +105,7 @@ const EmployeeCard = ({
                 eId: emp._id
             };
             const Response = await fetch(
-                `${BACKEND_URL}/delete-emp`,
+                `${BACKEND_URL}/api/delete-emp`,
                 {
                     method: 'POST',
                     headers: {
@@ -127,7 +127,7 @@ const EmployeeCard = ({
     };
 
     const fetchEmployeesDetails = async () => {
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/all`,
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/all`,
             {
                 method: "GET",
                 headers: {
