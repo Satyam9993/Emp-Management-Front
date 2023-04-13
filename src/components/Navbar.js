@@ -24,6 +24,9 @@ const Navbar = () => {
                     <Link className="mr-5 hover:text-gray-400" to="/" >Employe</Link>
                     <Link className="mr-5 hover:text-gray-400" to="/admin" >Admin Pannel</Link>
                 </nav>
+                <>
+                <img src={user.picture} className='h-10 w-10 rounded-full mx-3'/>
+                <p className="mr-5">{user.name}</p>
                 {
                     user ?
                         <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:text-gray-500 rounded text-base mt-4 dark:bg-gray-900 md:mt-0 dark:text-white" onClick={handleLogout} >Logout
@@ -38,6 +41,7 @@ const Navbar = () => {
                             </svg>
                         </Link>
                 }
+                </>
             </div>
         </header>
     )

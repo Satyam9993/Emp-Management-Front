@@ -24,9 +24,14 @@ const HomeBody = () => {
 
 
                 <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-3">
+                    {emps.length ? <>
                     {emps?.map((emp) => (
                         <EmployeeCard key={emp.eId} emp={emp} />
                     ))}
+                    </> : 
+                    <div>
+                        <p className='text-gray-200'>No Employee Added</p>
+                    </div>}
                 </div>
 
             </div>

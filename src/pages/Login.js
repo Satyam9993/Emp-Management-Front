@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { setLogin } from '../state';
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
@@ -95,6 +95,9 @@ const Login = () => {
                         >
                             <span>Login</span>
                         </button>
+                    </div>
+                    <div className="p-2 w-full">
+                        <Link to={'/signin'} className='text-blue-500 hover:text-blue-800'>SignIn with google</Link>
                     </div>
                 </div>
             </div>

@@ -6,19 +6,24 @@ import {
 import Admin from './pages/Admin';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Signin from './pages/Signin';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>,
+    element: <Home />,
   },
   {
     path: "/admin",
-    element: <Admin/>,
+    element: <Admin />,
   },
   {
     path: "/login",
-    element: <Login/>,
+    element: <Login />,
+  },
+  {
+    path: "/signin",
+    element: <Signin />,
   }
 ]);
 
