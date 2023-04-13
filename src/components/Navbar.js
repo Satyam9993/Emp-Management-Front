@@ -25,15 +25,17 @@ const Navbar = () => {
                     <Link className="mr-5 hover:text-gray-400" to="/admin" >Admin Pannel</Link>
                 </nav>
                 <>
-                <img src={user.picture} className='h-10 w-10 rounded-full mx-3'/>
-                <p className="mr-5">{user.name}</p>
                 {
                     user ?
+                        <>
+                        <img src={user.picture} className='h-10 w-10 rounded-full mx-3'/>
+                        <p className="mr-5">{user.name}</p>
                         <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:text-gray-500 rounded text-base mt-4 dark:bg-gray-900 md:mt-0 dark:text-white" onClick={handleLogout} >Logout
                             <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg>
                         </button>
+                        </>
                         :
                         <Link className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:text-gray-500 rounded text-base mt-4 dark:bg-gray-900 md:mt-0 dark:text-white" to="/login">Login
                             <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
